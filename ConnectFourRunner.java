@@ -63,8 +63,12 @@ public class ConnectFourRunner {
 
     public static void printBoard() {
         for (String[] row : board) {
-            System.out.println(ANSI_BLUE + Arrays.toString(row).replaceAll("\\[", "| ").replaceAll("[],]", "|").replaceAll(" ", "") + ANSI_RESET);
+            System.out.print(ANSI_BLUE + "| ");
+            for(String s : row) {
+                System.out.print(s + " | ");
+            }
+            System.out.println(ANSI_RESET);
         }
-        System.out.println(" 1\uFE0F⃣ 2\uFE0F⃣ 3\uFE0F⃣ 4\uFE0F⃣ 5\uFE0F⃣ 6\uFE0F⃣ 7\uFE0F⃣");
+        System.out.println("  1\uFE0F⃣    2\uFE0F⃣    3\uFE0F⃣    4\uFE0F⃣    5\uFE0F⃣    6\uFE0F⃣    7\uFE0F⃣   ");
     }
 }
